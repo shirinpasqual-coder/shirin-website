@@ -598,3 +598,34 @@ h1.project-title.project-title-nowrap {
   font-style: italic;
   text-decoration: none;
 }
+
+/* ---------- mobile ---------- */
+
+@media (max-width: 600px) {
+  body {
+    padding: 16px 20px 40px;
+    overflow-x: clip;
+  }
+
+  .back-link {
+    position: static;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .project-intro,
+  .project-footer {
+    width: 100%;
+  }
+
+  .project-intro-line,
+  .project-intro-question,
+  .bio-intro {
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  h1.project-title.project-title-nowrap {
+    white-space: normal;
+  }
+}
