@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Winter in Belleville — Shirin Pasqual</title>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <div class="project-intro">
+    <p>A fascination with tanning machines.</p>
+    <p class="project-intro-question">Photographed for Andy Riano's essay in Behaving Magazine.</p>
+  </div>
+
+  <h1 class="project-title">Winter in Belleville</h1>
+  <p class="project-credits">Photography — Shirin Pasqual</p>
+
+  <div class="still-viewer" id="stillViewer">
+    <div class="still-frame" id="stillFrame"></div>
+    <div class="still-caption" id="stillCaption">
+      <span class="still-caption-text"><span id="stillTime"></span><span id="stillLabel"></span></span>
+      <div class="still-arrows">
+        <button class="still-prev" id="stillPrev" aria-label="Previous still">&#10229;</button>
+        <button class="still-next" id="stillNext" aria-label="Next still">&#10230;</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-footer">
+    <p>Essay — Andy Riano</p>
+    <p>Photography — Shirin Pasqual</p>
+    <p class="project-footer-spaced">Published in Behaving Magazine</p>
+  </div>
+
+</div>
+
+<script>
+  const PROJECT_DATA = {
+    stills: [
+      { src: "media/stills/01.JPG" },
+      { src: "media/stills/02.jpg" },
+      { src: "media/stills/03.jpg" },
+      { src: "media/stills/04.jpg" },
+      { src: "media/stills/05.jpg" },
+      { src: "media/stills/06.jpg" }
+    ]
+  };
+  window.PROJECT_DATA = PROJECT_DATA;
+</script>
+<script src="../project.js"></script>
+
+</body>
+</html>

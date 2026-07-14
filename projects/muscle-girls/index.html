@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muscle Girls — Shirin Pasqual</title>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <div class="project-intro">
+    <p>Strength staged as a beauty ritual, in a country where the feminine ideal points the opposite direction.</p>
+  </div>
+
+  <h1 class="project-title">Muscle Girls</h1>
+  <p class="project-credits">Creative Direction, Camera, Edit — Shirin Pasqual</p>
+
+  <div class="still-viewer" id="stillViewer">
+    <div class="still-frame" id="stillFrame"></div>
+    <div class="still-caption" id="stillCaption">
+      <span class="still-caption-text"><span id="stillTime"></span><span id="stillLabel"></span></span>
+      <div class="still-arrows">
+        <button class="still-prev" id="stillPrev" aria-label="Previous still">&#10229;</button>
+        <button class="still-next" id="stillNext" aria-label="Next still">&#10230;</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-footer">
+    <p>Creative Direction — Ora Margolis, Shirin Pasqual</p>
+    <p>Camera, Edit — Shirin Pasqual</p>
+    <p>In collaboration with Strawberry Western</p>
+    <p>Featuring Chika & Hari, Muscle Girl's Bar</p>
+    <p class="project-footer-spaced">published by GATA</p>
+  </div>
+
+</div>
+
+<script>
+  const PROJECT_DATA = {
+    stills: [
+      { type: "vimeo", vimeoId: "1041544032", poster: "media/poster.jpg" },
+      { src: "media/stills/01.jpg" },
+      { src: "media/stills/02.jpg" },
+      { src: "media/stills/03.jpg" },
+      { src: "media/stills/04.jpg" },
+      { src: "media/stills/05.jpg" },
+      { src: "media/stills/06.jpg" },
+      { src: "media/stills/07.jpg" }
+    ]
+  };
+  window.PROJECT_DATA = PROJECT_DATA;
+</script>
+<script src="../project.js"></script>
+
+</body>
+</html>

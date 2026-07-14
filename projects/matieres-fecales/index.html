@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matières Fécales — Shirin Pasqual</title>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <div class="project-intro">
+    <p>Backstage at the Matières Fécales FW25 trunk show at Dover Street Market Ginza, Tokyo.<br>Captured on VHS for GATA Magazine.</p>
+  </div>
+
+  <h1 class="project-title project-title-nowrap">Matières Fécales — FW25 Tokyo Trunk Show</h1>
+  <p class="project-credits">BTS Camera, Edit — Shirin Pasqual</p>
+
+  <div class="still-viewer" id="stillViewer">
+    <div class="still-frame" id="stillFrame"></div>
+    <div class="still-caption" id="stillCaption">
+      <span class="still-caption-text"><span id="stillTime"></span><span id="stillLabel"></span></span>
+      <div class="still-arrows">
+        <button class="still-prev" id="stillPrev" aria-label="Previous still">&#10229;</button>
+        <button class="still-next" id="stillNext" aria-label="Next still">&#10230;</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const PROJECT_DATA = {
+    stills: [
+      { type: "video", src: "media/stills/01.mp4" },
+      { type: "video", src: "media/stills/02.mp4" },
+      { type: "video", src: "media/stills/03.mp4" },
+      { type: "video", src: "media/stills/04.mp4" },
+      { type: "video", src: "media/stills/05.mp4" },
+      { type: "video", src: "media/stills/06.mp4" }
+    ]
+  };
+  window.PROJECT_DATA = PROJECT_DATA;
+</script>
+<script src="../project.js"></script>
+
+</body>
+</html>

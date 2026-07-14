@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Butoh/Machine — Shirin Pasqual</title>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <div class="project-intro">
+    <p>A robotic arm learns to move against a butoh dancer's three hundred and sixty joints.</p>
+    <p class="project-intro-question">Reflex against servo motor, until neither reads as more natural than the other.</p>
+  </div>
+
+  <h1 class="project-title">Butoh/Machine</h1>
+  <p class="project-credits">Camera — Shirin Pasqual</p>
+
+  <div class="still-viewer" id="stillViewer">
+    <div class="still-frame" id="stillFrame"></div>
+    <div class="still-caption" id="stillCaption">
+      <span class="still-caption-text"><span id="stillTime"></span><span id="stillLabel"></span></span>
+      <div class="still-arrows">
+        <button class="still-prev" id="stillPrev" aria-label="Previous still">&#10229;</button>
+        <button class="still-next" id="stillNext" aria-label="Next still">&#10230;</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-footer">
+    <p>Concept, Direction — Charlotte Kemp Muhl</p>
+    <p>Creative & Tech Direction — Sage Morei</p>
+    <p>Camera — Shirin Pasqual</p>
+  </div>
+
+</div>
+
+<script>
+  const PROJECT_DATA = {
+    stills: [
+      { src: "media/stills/01.jpg" },
+      { src: "media/stills/02.jpg" },
+      { src: "media/stills/03.jpg" },
+      { src: "media/stills/04.jpg" },
+      { src: "media/stills/05.jpg" },
+      { src: "media/stills/06.jpg" },
+      { src: "media/stills/07.jpg" }
+    ]
+  };
+  window.PROJECT_DATA = PROJECT_DATA;
+</script>
+<script src="../project.js"></script>
+
+</body>
+</html>

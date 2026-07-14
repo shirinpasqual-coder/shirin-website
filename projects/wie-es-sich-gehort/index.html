@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wie es sich gehört — Shirin Pasqual</title>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <div class="project-intro">
+    <p class="project-intro-line">Vorarlberg, Austria. Eight rituals. Precise, synchronized, unspoken.</p>
+    <p class="project-intro-line">Acts repeated so consistently they become indistinguishable from identity itself.</p>
+    <p class="project-intro-question">Is belonging something we feel or something we perform?</p>
+  </div>
+
+  <h1 class="project-title">Wie es sich gehört</h1>
+  <p class="project-credits">Director, Cinematography – Shirin Pasqual</p>
+
+  <div class="project-video" id="projectVideo">
+    <div class="video-frame" id="videoFrame"></div>
+  </div>
+
+  <div class="still-viewer" id="stillViewer">
+    <div class="still-frame" id="stillFrame"></div>
+    <div class="still-caption" id="stillCaption">
+      <span class="still-caption-text"><span id="stillTime"></span><span id="stillLabel"></span></span>
+      <div class="still-arrows">
+        <button class="still-prev" id="stillPrev" aria-label="Previous still">&#10229;</button>
+        <button class="still-next" id="stillNext" aria-label="Next still">&#10230;</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="photobook-section" id="photobookSection">
+    <p class="photobook-title">Photobook</p>
+    <div class="photobook-viewer">
+      <div class="photobook-frame" id="photobookFrame"></div>
+      <div class="photobook-nav" id="photobookNav">
+        <span></span>
+        <div class="still-arrows">
+          <button class="still-prev" id="photobookPrev" aria-label="Previous spread">&#10229;</button>
+          <button class="still-next" id="photobookNext" aria-label="Next spread">&#10230;</button>
+        </div>
+      </div>
+    </div>
+    <p class="photobook-caption" id="photobookCaption"></p>
+  </div>
+
+</div>
+
+<script>
+  const viewMode = new URLSearchParams(window.location.search).get("from") === "film" ? "film" : "works";
+
+  const PROJECT_DATA = {
+    viewMode: viewMode,
+    vimeoId: "1201529944",
+    poster: "media/poster.jpg",
+    stills: [
+      { time: "7:01 AM", label: "Bettdecke ausschütteln", src: "media/stills/01.jpg" },
+      { time: "8:24 AM", label: "Im Stall", src: "media/stills/02.jpg" },
+      { time: "09:00 AM", label: "zNüne", src: "media/stills/03.jpg" },
+      { time: "12:00 PM", label: "Die Sirene", src: "media/stills/04.jpg" },
+      { time: "03:47 PM", label: "Kaffeekränzchen", src: "media/stills/05.jpg" },
+      { time: "05:03 PM", label: "Musikverein", src: "media/stills/06.jpg" },
+      { time: "06:11 PM", label: "Stammtisch", src: "media/stills/07.jpg" },
+      { time: "07:00 PM", label: "Vorarlberg Heute", src: "media/stills/08.jpg" }
+    ],
+    photobook: {
+      caption: "112 pages. A5. Red thread bound.",
+      price: "€35",
+      spreads: [
+        "media/photobook/01-cover.png",
+        "media/photobook/02.png",
+        "media/photobook/03.png",
+        "media/photobook/04.png",
+        "media/photobook/05.png",
+        "media/photobook/06.png",
+        "media/photobook/07.png",
+        "media/photobook/08.png"
+      ],
+      stripeUrl: "https://buy.stripe.com/aFa3cp2yG74y6Ec8jD1gs00"
+    }
+  };
+  window.PROJECT_DATA = PROJECT_DATA;
+</script>
+<script src="../project.js"></script>
+
+</body>
+</html>
