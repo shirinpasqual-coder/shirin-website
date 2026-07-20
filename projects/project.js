@@ -74,7 +74,11 @@
   function initBackLink() {
     const link = document.createElement("a");
     link.className = "back-link";
-    link.href = "../../";
+    const segments = window.location.pathname
+      .replace(/\/$/, "")
+      .split("/")
+      .filter((s) => s && s !== "index.html");
+    link.href = segments.length > 0 ? "../".repeat(segments.length) : "./";
     link.textContent = "BACK";
     document.body.insertBefore(link, document.body.firstChild);
   }

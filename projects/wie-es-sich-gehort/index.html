@@ -19,10 +19,6 @@
   <h1 class="project-title">Wie es sich gehört</h1>
   <p class="project-credits">Director, Cinematography – Shirin Pasqual</p>
 
-  <div class="project-video" id="projectVideo">
-    <div class="video-frame" id="videoFrame"></div>
-  </div>
-
   <div class="still-viewer" id="stillViewer">
     <div class="still-frame" id="stillFrame"></div>
     <div class="still-caption" id="stillCaption">
@@ -52,12 +48,8 @@
 </div>
 
 <script>
-  const viewMode = new URLSearchParams(window.location.search).get("from") === "film" ? "film" : "works";
-
   const PROJECT_DATA = {
-    viewMode: viewMode,
-    vimeoId: "1201529944",
-    poster: "media/poster.jpg",
+    viewMode: "works",
     stills: [
       { time: "7:01 AM", label: "Bettdecke ausschütteln", src: "media/stills/01.jpg" },
       { time: "8:24 AM", label: "Im Stall", src: "media/stills/02.jpg" },
