@@ -74,7 +74,7 @@
   function initBackLink() {
     const link = document.createElement("a");
     link.className = "back-link";
-    link.href = "../../index.html";
+    link.href = "../../";
     link.textContent = "BACK";
     document.body.insertBefore(link, document.body.firstChild);
   }
