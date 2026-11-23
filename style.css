@@ -28,12 +28,13 @@ html, body {
 
 body {
   font-family: "TWK Continental", Georgia, "Times New Roman", serif;
-  font-size: 13px;
+  /* same text size as the landing page, scaled with screen height */
+  font-size: clamp(11px, 1.4vh, 17px);
   font-weight: 400;
   line-height: 1.25;
   color: #000;
   background: #fff;
-  padding: 140px 24px 56px;
+  padding: 96px 24px 56px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -127,7 +128,7 @@ body {
 
 h1.name {
   text-align: center;
-  font-size: 16px;
+  font-size: 1.15em;
   font-weight: 700;
   margin: 0 0 12px;
 }
@@ -180,7 +181,7 @@ a:hover {
 
 h2.section-title {
   text-align: center;
-  font-size: 16px;
+  font-size: 1.15em;
   font-weight: 700;
   margin: 0 0 12px;
 }
@@ -234,7 +235,7 @@ h2.section-title {
 
 h1.project-title {
   text-align: center;
-  font-size: 16px;
+  font-size: 1.15em;
   font-weight: 700;
   margin: 0 0 6px;
 }
@@ -605,10 +606,6 @@ h1.project-title.project-title-nowrap {
 
 /* ---------- Wie es sich gehört: film, documentation, publication ---------- */
 
-body.project-wesg {
-  padding-top: 96px;
-}
-
 body.project-wesg .page {
   max-width: 960px;
 }
@@ -684,10 +681,6 @@ body.project-wesg .page {
 }
 
 @media (max-width: 600px) {
-  body.project-wesg {
-    padding-top: 64px;
-  }
-
   .wesg-columns {
     gap: 44px;
   }
@@ -697,7 +690,8 @@ body.project-wesg .page {
 
 @media (max-width: 600px) {
   body {
-    padding: 88px 20px 48px;
+    font-size: 14px;
+    padding: 64px 20px 48px;
     overflow-x: clip;
   }
 
