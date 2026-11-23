@@ -35,6 +35,7 @@
     if (!frame || !vimeoId) return;
 
     function loadPlayer() {
+      trackEvent("video_play", { vimeoId: vimeoId });
       frame.classList.remove("video-poster");
       frame.innerHTML = "";
       const iframe = document.createElement("iframe");
@@ -52,7 +53,7 @@
       frame.classList.add("video-poster");
       const img = document.createElement("img");
       img.src = poster;
-      img.alt = "";
+      img.alt = data.posterAlt || "";
       frame.appendChild(img);
 
       const playBtn = document.createElement("button");
@@ -69,6 +70,11 @@
     }
 
     loadPlayer();
+  }
+
+  // Vercel Web Analytics custom event; no-op when the analytics snippet is absent.
+  function trackEvent(name, props) {
+    if (typeof window.va === "function") window.va("event", { name: name, data: props });
   }
 
   function initBackLink() {
@@ -167,10 +173,12 @@
           mediaEl.src = still.src;
           mediaEl.load();
         }
-        mediaEl.alt = still.label || "";
+        const description = still.alt || still.label;
+        if (description) mediaEl.setAttribute("aria-label", description);
+        else mediaEl.removeAttribute("aria-label");
       } else {
         mediaEl.src = still.src;
-        mediaEl.alt = still.label || "";
+        mediaEl.alt = still.alt || still.label || "";
       }
 
       if (timeEl) timeEl.textContent = still.time ? still.time + " " : "";
@@ -184,6 +192,7 @@
       wrapper.className = "video-frame";
 
       function loadPlayer() {
+        trackEvent("video_play", { vimeoId: vimeoId });
         wrapper.className = "video-frame";
         wrapper.innerHTML = "";
         const iframe = document.createElement("iframe");
@@ -201,7 +210,7 @@
         wrapper.classList.add("video-poster");
         const img = document.createElement("img");
         img.src = poster;
-        img.alt = "";
+        img.alt = still.alt || "";
         wrapper.appendChild(img);
 
         const playBtn = document.createElement("button");
@@ -248,7 +257,9 @@
           (price ? price + " " : "") +
           '— <a href="' +
           stripeUrl +
-          '" target="_blank" rel="noopener">[order here]</a>';
+          '" target="_blank" rel="noopener" data-track="photobook_order">[order here]</a>';
+        const orderLink = captionEl.querySelector("[data-track]");
+        if (orderLink) orderLink.addEventListener("click", () => trackEvent("photobook_order"));
       } else if (caption) {
         captionEl.textContent = caption;
       }
@@ -284,6 +295,7 @@
 
     function render() {
       img.src = spreads[index];
+      img.alt = "Photobook spread " + (index + 1) + " of " + spreads.length;
     }
 
     render();

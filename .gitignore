@@ -6,8 +6,26 @@
 !projects/matieres-fecales/media/stills/04.mp4
 !projects/matieres-fecales/media/stills/05.mp4
 !projects/matieres-fecales/media/stills/06.mp4
+!projects/matieres-fecales/media/stills/web/01.mp4
+!projects/matieres-fecales/media/stills/web/02.mp4
+!projects/matieres-fecales/media/stills/web/03.mp4
+!projects/matieres-fecales/media/stills/web/04.mp4
+!projects/matieres-fecales/media/stills/web/05.mp4
+!projects/matieres-fecales/media/stills/web/06.mp4
 !projects/devour-me/media/stills/01.mp4
 !projects/devour-me/media/stills/04.mp4
+!projects/devour-me/media/stills/web/01.mp4
+!projects/devour-me/media/stills/web/04.mp4
 !projects/betsy-johnson/media/stills/02.mp4
 !projects/betsy-johnson/media/stills/05.mp4
 !projects/betsy-johnson/media/stills/06.mp4
+!projects/betsy-johnson/media/stills/web/02.mp4
+!projects/betsy-johnson/media/stills/web/05.mp4
+!projects/betsy-johnson/media/stills/web/06.mp4
+!media/hero-loop.mp4
+
+# local SEO audit notes and PDFs
+seo-audit/
+
+# redesign working files and backups
+_redesign-work/

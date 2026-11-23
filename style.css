@@ -33,7 +33,7 @@ body {
   line-height: 1.25;
   color: #000;
   background: #fff;
-  padding: 20px 24px 48px;
+  padding: 140px 24px 56px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -44,7 +44,7 @@ body {
 
 .back-link {
   position: fixed;
-  top: 20px;
+  top: 28px;
   left: 24px;
   font-size: inherit;
   font-weight: 400;
@@ -257,6 +257,10 @@ h1.project-title.project-title-nowrap {
 
 .project-video {
   margin-bottom: 4px;
+}
+
+.project-video + .still-viewer {
+  margin-top: 40px;
 }
 
 .video-frame {
@@ -603,7 +607,7 @@ h1.project-title.project-title-nowrap {
 
 @media (max-width: 600px) {
   body {
-    padding: 16px 20px 40px;
+    padding: 88px 20px 48px;
     overflow-x: clip;
   }
 
@@ -628,4 +632,131 @@ h1.project-title.project-title-nowrap {
   h1.project-title.project-title-nowrap {
     white-space: normal;
   }
+}
+
+/* ---------- home page: one screen, no scroll ---------- */
+/* Sizes scale with screen height so the page always fits without scrolling. */
+
+body.home {
+  font-size: clamp(11px, 1.4vh, 17px);
+  min-height: 100dvh;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.home .page {
+  max-width: 44em;
+  width: 100%;
+  padding: 6vh 0 2vh;
+}
+
+body.home .hero {
+  width: 62%;
+  max-width: 24em;
+  margin: 0 auto 1.2em;
+}
+
+body.home .hero video {
+  max-height: 26vh;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+body.home .page > :not(.hero):not(.bio):not(.home-lists) {
+  max-width: 24em;
+}
+
+body.home h1.name,
+body.home h2.section-title {
+  font-size: 1.15em;
+}
+
+body.home h1.name {
+  margin-bottom: 0.5em;
+}
+
+body.home h2.section-title {
+  margin-bottom: 0.6em;
+}
+
+body.home .contact {
+  margin-bottom: 0.5em;
+}
+
+body.home .social-links {
+  margin-bottom: 1.4em;
+}
+
+body.home .bio {
+  max-width: 36em;
+  text-wrap: pretty;
+  margin-bottom: 1.6em;
+}
+
+body.home .bio-intro {
+  white-space: normal;
+  margin-bottom: 0.9em;
+}
+
+body.home .bio-intro,
+body.home .bio-body {
+  line-height: 1.35;
+}
+
+body.home .home-col + .home-col {
+  margin-top: 1.5em;
+}
+
+body.home .link-list {
+  margin-bottom: 0;
+}
+
+body.home .link-list li {
+  line-height: 1.22;
+}
+
+@media (min-width: 601px) {
+  body.home {
+    height: 100dvh;
+    overflow: hidden;
+  }
+}
+
+/* short laptop screens: shrink the video a little so the stacked lists still fit */
+@media (min-width: 601px) and (max-height: 800px) {
+  body.home .hero video {
+    max-height: 20vh;
+  }
+
+  body.home .link-list li {
+    line-height: 1.15;
+  }
+}
+
+@media (max-width: 600px) {
+  body.home {
+    font-size: 14px;
+    height: auto;
+    min-height: 100dvh;
+    overflow: auto;
+    padding: 72px 20px 36px;
+    display: block;
+  }
+
+  body.home .page {
+    padding: 0;
+  }
+
+  body.home .hero {
+    width: 72%;
+    max-width: 280px;
+  }
+
+  body.home .hero video {
+    max-height: none;
+  }
+
 }
