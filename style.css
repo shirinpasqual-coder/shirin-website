@@ -43,7 +43,7 @@ body {
 }
 
 .back-link {
-  position: fixed;
+  position: absolute;
   top: 28px;
   left: 24px;
   font-size: inherit;
@@ -57,7 +57,7 @@ body {
   text-decoration: underline;
 }
 
-.page > :not(.hero):not(.bio):not(.project-intro):not(.still-viewer):not(.photobook-section):not(.project-video):not(.project-footer) {
+.page > :not(.hero):not(.bio):not(.project-intro):not(.still-viewer):not(.photobook-section):not(.project-video):not(.project-footer):not([class*="wesg-"]) {
   max-width: 300px;
   margin-left: auto;
   margin-right: auto;
@@ -601,6 +601,96 @@ h1.project-title.project-title-nowrap {
   color: #777;
   font-style: italic;
   text-decoration: none;
+}
+
+/* ---------- Wie es sich gehört: film, documentation, publication ---------- */
+
+body.project-wesg {
+  padding-top: 96px;
+}
+
+body.project-wesg .page {
+  max-width: 960px;
+}
+
+.wesg-label {
+  text-align: left;
+  font-size: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  margin: 0 0 10px;
+}
+
+.wesg-film {
+  margin-bottom: 52px;
+}
+
+.wesg-description {
+  text-align: left;
+  font-style: italic;
+  line-height: 1.3;
+  margin: 12px 0 0;
+}
+
+/* photos and book below the film: smaller, centred */
+.wesg-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 56px;
+}
+
+.wesg-col {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.wesg-columns .still-caption {
+  margin-bottom: 0;
+}
+
+.wesg-columns .photobook-viewer {
+  width: 100%;
+  max-width: none;
+}
+
+.wesg-columns .photobook-caption {
+  margin: 6px 0 0;
+}
+
+.wesg-footer {
+  margin: 64px auto 32px;
+}
+
+.project-footer .wesg-footer-head {
+  font-weight: 700;
+  margin-top: 16px;
+}
+
+.project-footer .wesg-footer-head + p {
+  margin-top: 0;
+}
+
+.wesg-flyer {
+  max-width: 360px;
+  margin: 0 auto 60px;
+}
+
+.wesg-flyer img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  body.project-wesg {
+    padding-top: 64px;
+  }
+
+  .wesg-columns {
+    gap: 44px;
+  }
 }
 
 /* ---------- mobile ---------- */

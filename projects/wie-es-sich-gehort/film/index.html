@@ -38,7 +38,7 @@
 <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
-<body>
+<body class="project-wesg">
 
 <main class="page">
 
@@ -51,40 +51,56 @@
   <h1 class="project-title">Wie es sich gehört</h1>
   <p class="project-credits">Director, Cinematography – Shirin Pasqual</p>
 
-  <div class="project-video" id="projectVideo">
-    <div class="video-frame" id="videoFrame"></div>
-  </div>
-
-  <div class="still-viewer" id="stillViewer">
-    <div class="still-frame" id="stillFrame"></div>
-    <div class="still-caption" id="stillCaption">
-      <span class="still-caption-text"><span id="stillTime"></span><span id="stillLabel"></span></span>
-      <div class="still-arrows">
-        <button class="still-prev" id="stillPrev" aria-label="Previous still">&#10229;</button>
-        <button class="still-next" id="stillNext" aria-label="Next still">&#10230;</button>
-      </div>
+  <section class="wesg-film">
+    <h2 class="wesg-label">Film</h2>
+    <div class="project-video" id="projectVideo">
+      <div class="video-frame" id="videoFrame"></div>
     </div>
-  </div>
+    <p class="wesg-description"><em>Wie es sich gehört</em> is a short film observing eight everyday rituals in Vorarlberg, Austria. Approaching familiar traditions from the perspective of someone returning after years abroad, the film looks at the relationship between individual experience and collective customs.</p>
+  </section>
 
-  <div class="photobook-section" id="photobookSection">
-    <p class="photobook-title">Photobook</p>
-    <div class="photobook-viewer">
-      <div class="photobook-frame" id="photobookFrame"></div>
-      <div class="photobook-nav" id="photobookNav">
-        <span></span>
-        <div class="still-arrows">
-          <button class="still-prev" id="photobookPrev" aria-label="Previous spread">&#10229;</button>
-          <button class="still-next" id="photobookNext" aria-label="Next spread">&#10230;</button>
+  <div class="wesg-columns">
+    <section class="wesg-col">
+      <h2 class="wesg-label">Photographic documentation</h2>
+      <div class="still-viewer" id="stillViewer">
+        <div class="still-frame" id="stillFrame"></div>
+        <div class="still-caption" id="stillCaption">
+          <span class="still-caption-text"><span id="stillTime"></span><span id="stillLabel"></span></span>
+          <div class="still-arrows">
+            <button class="still-prev" id="stillPrev" aria-label="Previous still">&#10229;</button>
+            <button class="still-next" id="stillNext" aria-label="Next still">&#10230;</button>
+          </div>
         </div>
       </div>
-    </div>
-    <p class="photobook-caption" id="photobookCaption"></p>
+    </section>
+
+    <section class="wesg-col photobook-section" id="photobookSection">
+      <h2 class="wesg-label">Publication</h2>
+      <div class="photobook-viewer">
+        <div class="photobook-frame" id="photobookFrame"></div>
+        <div class="photobook-nav" id="photobookNav">
+          <span></span>
+          <div class="still-arrows">
+            <button class="still-prev" id="photobookPrev" aria-label="Previous spread">&#10229;</button>
+            <button class="still-next" id="photobookNext" aria-label="Next spread">&#10230;</button>
+          </div>
+        </div>
+      </div>
+      <p class="photobook-caption" id="photobookCaption"></p>
+    </section>
   </div>
 
-  <div class="project-footer">
+  <div class="project-footer wesg-footer">
     <p>No narration. No explanation. Just observation, until the familiar becomes strange.</p>
-    <p>Supported by Austrian Cultural Forum Tokyo</p>
+    <p class="wesg-footer-head">Exhibition</p>
+    <p>Austrian Cultural Forum Tokyo, June 2026</p>
+    <p class="wesg-footer-head">Supported by</p>
+    <p>Austrian Cultural Forum Tokyo</p>
   </div>
+
+  <figure class="wesg-flyer">
+    <img src="../media/flyer.jpg" width="1000" height="1325" loading="lazy" alt="Exhibition flyer: Shirin Pasqual, Wie es sich gehört, Film &amp; Exhibition, Austrian Cultural Forum Tokyo, June 12–30, 2026">
+  </figure>
 
 </main>
 
