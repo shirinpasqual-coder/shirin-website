@@ -58,7 +58,7 @@ body {
   text-decoration: underline;
 }
 
-.page > :not(.hero):not(.bio):not(.project-intro):not(.still-viewer):not(.photobook-section):not(.project-video):not(.project-footer):not([class*="wesg-"]) {
+.page > :not(.hero):not(.bio):not(.project-intro):not(.still-viewer):not(.photobook-section):not(.project-video):not(.project-footer):not(.project-credits):not([class*="wesg-"]) {
   max-width: 300px;
   margin-left: auto;
   margin-right: auto;
