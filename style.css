@@ -732,9 +732,27 @@ body.project-wesg .page {
   }
 }
 
+/* line break that only applies on phones */
+.br-mobile {
+  display: none;
+}
+
 /* ---------- mobile ---------- */
 
 @media (max-width: 600px) {
+  .br-mobile {
+    display: inline;
+  }
+
+  .br-desktop {
+    display: none;
+  }
+
+  /* even line lengths for wrapped intro text on phones */
+  .project-intro p {
+    text-wrap: balance;
+  }
+
   body {
     font-size: 14px;
     padding: 64px 20px 48px;
@@ -744,7 +762,7 @@ body.project-wesg .page {
   .back-link {
     position: static;
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 36px;
   }
 
   .project-intro,
