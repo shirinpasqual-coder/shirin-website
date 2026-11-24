@@ -58,7 +58,7 @@ body {
   text-decoration: underline;
 }
 
-.page > :not(.hero):not(.bio):not(.project-intro):not(.still-viewer):not(.photobook-section):not(.project-video):not(.project-footer):not(.project-credits):not([class*="wesg-"]) {
+.page > :not(.hero):not(.bio):not(.project-intro):not(.still-viewer):not(.photobook-section):not(.project-video):not(.project-footer):not(.project-credits):not(.about-text):not([class*="wesg-"]) {
   max-width: 300px;
   margin-left: auto;
   margin-right: auto;
@@ -612,6 +612,29 @@ h1.project-title + .still-viewer {
   color: #777;
   font-style: italic;
   text-decoration: none;
+}
+
+/* ---------- about page ---------- */
+
+body.about h1.project-title {
+  margin-bottom: 3em;
+}
+
+.about-text {
+  max-width: 34em;
+  margin: 0 auto 60px;
+  text-align: center;
+  line-height: 1.3;
+  text-wrap: pretty;
+}
+
+.about-text p {
+  margin: 0 0 1em;
+}
+
+.about-text .about-contact-head {
+  font-weight: 700;
+  margin-top: 2.6em;
 }
 
 /* ---------- pages whose films are 4:3 ---------- */
