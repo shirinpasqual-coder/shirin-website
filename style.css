@@ -265,7 +265,8 @@ h1.project-title.project-title-nowrap {
 }
 
 /* pages without a credits line under the title */
-h1.project-title + .project-video {
+h1.project-title + .project-video,
+h1.project-title + .still-viewer {
   margin-top: 30px;
 }
 
