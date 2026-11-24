@@ -23,7 +23,7 @@
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "name": "Unreal Motion — Nike Air Max Dn8",
-  "description": "For the launch of the Nike Air Max Dn8, its eight air chambers became eight creatives, each with a story, based in and around Japan. sabukaru × Nike Tokyo.",
+  "description": "For the launch of the Nike Air Max Dn8, its eight air chambers became eight creatives, each with a story rooted in Japan. sabukaru × Nike Tokyo.",
   "thumbnailUrl": "https://www.shirinpasqual.com/projects/nike-tokyo-dn8/media/poster.jpg",
   "uploadDate": "2026-05-02T18:04:50Z",
   "duration": "PT18S",
@@ -38,20 +38,28 @@
 <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
-<body>
+<body class="films-4x3">
 
 <main class="page">
 
   <div class="project-intro">
-    <p>For the launch of the Air Max Dn8, its eight air chambers became eight creatives,<br>each with a story, based in and around Japan.</p>
-    <p class="project-intro-question">Eight artist videos and the zine's photography, shot and edited in full.</p>
+    <p>For the launch of the Nike Air Max Dn8, its eight Air chambers became eight creatives, each with a story rooted in Japan.</p>
+    <p>Eight artist films and the accompanying zine photography, shot and edited in full.</p>
   </div>
 
   <h1 class="project-title">Nike Tokyo DN8</h1>
-  <p class="project-credits">Video, Photography, Edit — Shirin Pasqual</p>
+  <p class="project-credits">Direction, Camera &amp; Edit – Shirin Pasqual</p>
 
-  <div class="project-video" id="projectVideo">
-    <div class="video-frame" id="videoFrame"></div>
+  <!-- video slideshow: add more films to PROJECT_DATA.stills below -->
+  <div class="still-viewer" id="stillViewer">
+    <div class="still-frame" id="stillFrame"></div>
+    <div class="still-caption" id="stillCaption">
+      <span class="still-caption-text"><span id="stillTime"></span><span id="stillLabel"></span></span>
+      <div class="still-arrows">
+        <button class="still-prev" id="stillPrev" aria-label="Previous film">&#10229;</button>
+        <button class="still-next" id="stillNext" aria-label="Next film">&#10230;</button>
+      </div>
+    </div>
   </div>
 
   <div class="project-footer">
@@ -65,9 +73,11 @@
 
 <script>
   const PROJECT_DATA = {
-    vimeoId: "1188703585",
-    poster: "media/poster.jpg",
-    posterAlt: "Gloved hands at work behind overlaid text reading \"who tries to transcend the impossible\", still from the Nike Air Max Dn8 artist videos"
+    stills: [
+      { type: "vimeo", vimeoId: "1188703585", poster: "media/poster.jpg", alt: "Gloved hands at work behind overlaid text reading \"who tries to transcend the impossible\", still from the Nike Air Max Dn8 artist videos" },
+      { type: "vimeo", vimeoId: "1249506190", poster: "media/films/02.jpg", alt: "Dark green smoke with the subtitle \"existing but not there, not existing, but there\", still from the Nike Air Max Dn8 artist videos" },
+      { type: "vimeo", vimeoId: "1249507159", poster: "media/films/03.jpg", alt: "A man in a denim jacket and Nike Air Max Dn8 sneakers sitting by a wood stove in a workshop, still from the Nike Air Max Dn8 artist videos" }
+    ]
   };
   window.PROJECT_DATA = PROJECT_DATA;
 </script>

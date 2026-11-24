@@ -613,6 +613,19 @@ h1.project-title + .project-video {
   text-decoration: none;
 }
 
+/* ---------- pages whose films are 4:3 ---------- */
+
+body.films-4x3 .video-frame,
+body.films-4x3 .still-frame .video-frame {
+  padding-bottom: 75%;
+}
+
+body.films-4x3 .video-frame.video-poster,
+body.films-4x3 .still-frame .video-frame.video-poster {
+  padding-bottom: 0;
+  aspect-ratio: 4 / 3;
+}
+
 /* ---------- Wie es sich gehört: film, documentation, publication ---------- */
 
 body.project-wesg .page {
